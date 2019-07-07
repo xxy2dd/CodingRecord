@@ -20,6 +20,15 @@ public class ReverseList {
         }
         return pre;
     }
+    public ListNode ReverseList2(ListNode head) {
+        if(head == null || head.next == null){
+            return head;
+        }
+        ListNode p = ReverseList2(head.next);
+        head.next.next = head;
+        head.next = null;
+        return p;
+    }
     class ListNode {
         int val;
         ListNode next = null;

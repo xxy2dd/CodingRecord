@@ -67,7 +67,6 @@ public class mergeSort {
     }
 
     public void merge(int[] nums, int left, int mid, int right) {
-
         // 临时数组存放合并和的结果
         int[] temp = new int[nums.length];
         int k = 0;

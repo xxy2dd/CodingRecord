@@ -1,4 +1,4 @@
-package com.company.leetcode;
+package com.company.bytedance.array;
 
 import java.util.HashMap;
 import java.util.Map;

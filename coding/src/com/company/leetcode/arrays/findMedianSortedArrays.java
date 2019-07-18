@@ -1,4 +1,4 @@
-package com.company.leetcode;
+package com.company.leetcode.arrays;
 
 /**
  * @author xxy

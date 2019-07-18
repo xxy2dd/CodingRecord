@@ -1,4 +1,6 @@
-package com.company.leetcode;
+package com.company.leetcode.list;
+
+import com.company.leetcode.list.ListNode;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

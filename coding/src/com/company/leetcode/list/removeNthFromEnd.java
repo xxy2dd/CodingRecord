@@ -1,4 +1,6 @@
-package com.company.leetcode;
+package com.company.leetcode.list;
+
+import com.company.leetcode.list.ListNode;
 
 /**
  * @author xxy

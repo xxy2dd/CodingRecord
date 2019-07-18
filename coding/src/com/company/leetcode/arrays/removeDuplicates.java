@@ -1,4 +1,4 @@
-package com.company.leetcode;
+package com.company.leetcode.arrays;
 
 /**
  * @author xxy
@@ -36,8 +36,9 @@ public class removeDuplicates {
         for(int i = 0; i<len;i++){
             int j=0;
             for(;j<index;j++){
-                if(nums[j] == nums[i])
+                if(nums[j] == nums[i]) {
                     break;
+                }
             }
             if(j == index){
                 nums[index++]=nums[i];

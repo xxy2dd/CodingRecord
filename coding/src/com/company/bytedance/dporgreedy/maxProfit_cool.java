@@ -25,6 +25,7 @@ package com.company.bytedance.dporgreedy;
  * sell[i] = Math.max(sell[i-1],buy[i-1]+prices[i]);
  * cooldown[i] = sell[i-1];
  * buy[i] = Math.max(buy[i-1],cooldown[i-1]-prices[i]);
+ *
  */
 public class maxProfit_cool {
     public int maxProfit(int[] prices) {

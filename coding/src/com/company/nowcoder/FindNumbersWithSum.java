@@ -17,6 +17,7 @@ public class FindNumbersWithSum {
         }
         int i = 0,j=array.length-1;
         while(i<j){
+            // 因为数组是递增的 所以第一次满足条件的即为乘积最小的
             if(array[i]+array[j]==sum){
                 result.add(array[i]);
                 result.add(array[j]);

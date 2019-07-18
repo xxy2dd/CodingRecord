@@ -24,6 +24,7 @@ public class Permutation {
             return res1;
         }
         char[] chars = str.toCharArray();
+        // œ»≈≈–Ú
         Arrays.sort(chars);
         while(f){
             nextPermutation(chars);

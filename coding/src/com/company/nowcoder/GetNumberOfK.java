@@ -12,6 +12,7 @@ public class GetNumberOfK {
         int last = binarySearch(array,k+1);
         return (first==array.length||array[first]!=k)?0:last-first;
     }
+    // 二分查找找最左侧元素模板
     private int binarySearch(int [] array , int k){
         int l = 0 , h =array.length;
         while(l<h){

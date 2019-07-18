@@ -7,6 +7,7 @@ package com.company.leetcode.tree;
  * 根据一棵树的中序遍历与后序遍历构造二叉树。
  * 注意:
  * 你可以假设树中没有重复的元素。
+ * 思路：后序遍历数组中最后一个元素一定是根节点，根据这个特性 可以限定 左右子树在两个数组中的下标范围 递归实现树的构造
  */
 public class buildTree {
     public TreeNode buildTree(int[] inorder, int[] postorder) {

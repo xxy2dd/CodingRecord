@@ -16,12 +16,15 @@ public class maxSlidingWindow {
         if(nums==null||nums.length<=1){
             return nums;
         }
+        // 利用优先队列，大顶堆
         PriorityQueue<Integer> queue = new PriorityQueue<Integer>((o1, o2)->o2-o1);
         for(int i=0;i<k;i++){
             queue.add(nums[i]);
         }
+        // 取出当前窗口中最大的元素，但不删除
         res[0] = queue.peek();
         for(int i =0,j=i+k;j<nums.length;i++,j++){
+            // 移动窗口，删除最左侧元素
             queue.remove(nums[i]);
             queue.add(nums[j]);
             res[i+1] = queue.peek();

@@ -15,7 +15,9 @@ public class FindContinuousSequence {
     public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
         int plow=1,phigh=2;
+        // 滑动窗口的思想
         while(plow<phigh){
+            // 求和公式
             int cur_sum = (plow+phigh)*(phigh-plow+1)/2;
             if(cur_sum==sum){
                 ArrayList<Integer> list = new ArrayList<Integer>();

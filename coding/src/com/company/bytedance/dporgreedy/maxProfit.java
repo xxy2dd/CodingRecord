@@ -16,9 +16,11 @@ public class maxProfit {
         int min = prices[0];
         int profit = 0;
         for(int i : prices){
+            // 记录i之前的最小值
             if(i<min){
                 min = i;
             }
+            // 计算当前利润并更新
             profit = Math.max(profit,i-min);
         }
         return profit;

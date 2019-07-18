@@ -13,6 +13,7 @@ import java.util.PriorityQueue;
  * 使用GetMedian()方法获取当前读取数据的中位数。
  */
 public class GetMedian {
+    // 两个优先队列 一个大顶堆 一个小顶堆
     private PriorityQueue<Integer> left = new PriorityQueue<>((o1, o2)->o2-o1);
     private PriorityQueue<Integer> right = new PriorityQueue<>();
     private int N = 0;

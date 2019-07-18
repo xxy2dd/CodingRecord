@@ -12,6 +12,7 @@ public class FindKthToTail {
         }
         ListNode pointer1 = head;
         ListNode pointer2 = head;
+        // 快指针先走k-1步
         for(int i = 0;i<k-1;i++){
             if(pointer1.next!=null){
                 pointer1 = pointer1.next;
@@ -20,6 +21,7 @@ public class FindKthToTail {
             }
 
         }
+        // 当快指针走到尾节点时,慢指针刚好指向倒数第k个节点
         while(pointer1.next!=null){
             pointer1 = pointer1.next;
             pointer2 = pointer2.next;

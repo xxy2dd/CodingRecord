@@ -17,6 +17,7 @@ public class lengthOfLongestSubstring {
     public int lengthOfLongestSubstring(String s) {
         int len = 0;
         int start = 0;
+        // 利用 Map 存储，判断字符是否重复，value 为字符最新出现的下标
         Map<Character,Integer> map = new HashMap();
         for(int i = 0;i<s.length();i++){
             if(map.containsKey(s.charAt(i))){

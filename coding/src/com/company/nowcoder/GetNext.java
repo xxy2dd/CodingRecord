@@ -10,23 +10,33 @@ package com.company.nowcoder;
 public class GetNext {
     public TreeLinkNode GetNext(TreeLinkNode pNode)
     {
-        if (pNode == null)
+        if (pNode == null) {
             return pNode;
-        if (pNode.right != null) { // 节点有右子树
+        }
+        // 节点有右子树
+        if (pNode.right != null) {
             pNode = pNode.right;
+            // 右子树的左子树
             while (pNode.left != null) {
                 pNode = pNode.left;
             }
             return pNode;
-        } else if ( pNode.next != null && pNode.next.left == pNode) { // 节点无右子树且该节点为父节点的左子节点
+        }
+        // 节点无右子树且该节点为父节点的左子节点
+        else if ( pNode.next != null && pNode.next.left == pNode) {
             return pNode.next;
-        } else if (pNode.next != null && pNode.next .right == pNode) { // 节点无右子树且该节点为父节点的右子节点
+        }
+        // 节点无右子树且该节点为父节点的右子节点
+        else if (pNode.next != null && pNode.next .right == pNode) {
+            // 判断父节点是否有左子树
             while(pNode.next != null && pNode .next .left != pNode){
                 pNode = pNode.next ;
             }
             return pNode.next ;
-        }else{
-            return pNode.next ;//节点无父节点 ，即节点为根节点
+        }
+        //节点无父节点 ，即节点为根节点
+        else{
+            return pNode.next ;
         }
 
     }

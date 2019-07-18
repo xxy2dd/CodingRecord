@@ -17,6 +17,7 @@ package com.company.bytedance.dporgreedy;
  */
 public class maximalSquare {
     public int maximalSquare(char[][] matrix) {
+        // 判断数组是否为空
         if(matrix.length==0||matrix[0].length==0){
             return 0;
         }
@@ -24,6 +25,7 @@ public class maximalSquare {
         int col = matrix[0].length;
         int res = 0;
         int[][] dp = new int[row][col];
+        // 初始化 dp 数组
         for(int i=0;i<row;i++){
             if(matrix[i][0]=='1'){
                 dp[i][0] = 1;
@@ -37,11 +39,13 @@ public class maximalSquare {
 
             }
         }
+        // 遍历数组 利用动态规划公式
         for(int i=1;i<row;i++){
             for(int j=1;j<col;j++){
                 if(matrix[i][j]=='1'){
                     dp[i][j] = Math.min(Math.min(dp[i-1][j],dp[i][j-1]),dp[i-1][j-1])+1;
                 }
+                // 更新最大边长
                 res = Math.max(res,dp[i][j]);
             }
         }

@@ -15,6 +15,7 @@ public class FindInTwodimensionArray {
         int rowCount = array.length;
         int colCount = array[0].length;
         int i,j;
+        // 根据二维数组的特性，从右上角的数开始遍历
         for(i=0,j=colCount-1;i<rowCount&&j>=0;){
             if(target==array[i][j]){
                 return true;
@@ -27,6 +28,7 @@ public class FindInTwodimensionArray {
                 i++;
                 continue;
             }
+
         }
         return false;
     }

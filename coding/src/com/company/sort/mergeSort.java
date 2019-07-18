@@ -24,7 +24,9 @@ public class mergeSort {
         }
         mergesort(nums, 0, nums.length - 1);
     }
+
     // 常规思路 递归实现
+
     public void mergesort(int[] nums, int left, int right) {
         // 注意递归结束条件 left>=right
         if (left >= right) {
@@ -38,7 +40,9 @@ public class mergeSort {
         merge(nums, left, mid, right);
 
     }
+
     // 非递归实现
+
     public void mergesort2(int[] nums){
         int n = nums.length,s = 2,i;
         while(s<=n){

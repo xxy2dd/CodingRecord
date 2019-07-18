@@ -61,7 +61,7 @@ public class sortList {
         if(head2!=null){
             p.next = head2;
         }
-        
+
         return head.next;
     }
 }

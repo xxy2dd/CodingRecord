@@ -12,14 +12,21 @@ import java.util.Map;
  * 输出: 3
  * 解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
  * 请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
+ * 思路：双指针
  */
 public class lengthOfLongestSubstring {
-    public int lengthOfLongestSubstring(String s) {
+    public static void main(String[] args){
+        String s = "pwwkew";
+        int res = lengthOfLongestSubstring(s);
+        System.out.println(res);
+    }
+    public static  int lengthOfLongestSubstring(String s) {
         int len = 0;
         int start = 0;
         // 利用 Map 存储，判断字符是否重复，value 为字符最新出现的下标
         Map<Character,Integer> map = new HashMap();
         for(int i = 0;i<s.length();i++){
+            // 更新 start 指针
             if(map.containsKey(s.charAt(i))){
                 start =Math.max(map.get(s.charAt(i))+1,start);
             }

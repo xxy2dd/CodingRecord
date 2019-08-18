@@ -30,7 +30,7 @@ public class hasPathSum {
         // 判断左右子树是否为空，为空说明遍历到叶子节点，
         // 判断此时t==0,为0表示存在，不为0表示不存在
         if(root.left==null&&root.right==null){
-            return t==0?true:false;
+            return (t==0)?true:false;
         }
         // 遍历左子树和右子树
         return hasPathSum(root.left,t)||hasPathSum(root.right,t);

@@ -18,7 +18,7 @@ public class heapSort {
 
     public void heapsort(int[] nums) {
         // 将待排序的数组构建成一个大顶堆
-        // 整个序列的最大值就是堆顶的节点，将它与数组的尾部元素交换，此时莫为元素就是最大值
+        // 整个序列的最大值就是堆顶的节点，将它与数组的尾部元素交换，此时末尾元素就是最大值
         // 剩下的n-1个序列重复构造
         int n = nums.length;
         for (int i = n / 2; i >= 0; i--) {

@@ -30,7 +30,6 @@ public class GetLeastNumbers {
             if(queue.size()<k){
                 queue.add(input[i]);
             }else{
-
                 if(input[i]<queue.peek()){
                     queue.remove(queue.peek());
                     queue.add(input[i]);

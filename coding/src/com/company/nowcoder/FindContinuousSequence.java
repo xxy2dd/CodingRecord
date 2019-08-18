@@ -27,8 +27,10 @@ public class FindContinuousSequence {
                 result.add(list);
                 plow++;
             }else if(cur_sum>sum){
+                // 结果比sum大，则移动low指针
                 plow++;
             }else{
+                // 结果小，则移动high指针
                 phigh++;
             }
         }

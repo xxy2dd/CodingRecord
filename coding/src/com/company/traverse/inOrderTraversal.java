@@ -22,7 +22,7 @@ public class inOrderTraversal {
         Stack<TreeNode> stack = new Stack<>();
         TreeNode curr = root;
         while(curr!=null||!stack.isEmpty()){
-            // 一直添加左节点 知道左节点为空
+            // 一直添加左节点 直到左节点为空
             while(curr!=null){
                 stack.push(curr);
                 curr = curr.left;

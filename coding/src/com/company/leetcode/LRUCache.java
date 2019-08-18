@@ -10,26 +10,6 @@ import java.util.LinkedHashMap;
  * 方法一：利用 LinkedHasgMap 实现
  * 方法二：自定义双向链表Node + HashMap
  */
-/*public class LRUCache {
-    int capacity;
-    LinkedHashMap<Integer,Integer> map;
-
-    public LRUCache(int capacity) {
-        this.capacity = capacity;
-        map = new LinkedHashMap<>(capacity,0.75f,true);
-    }
-
-    public int get(int key) {
-        return map.get(key)==null?-1:map.get(key);
-    }
-
-    public void put(int key, int value) {
-        if(map.size()>=capacity&&!map.containsKey(key)){
-            map.remove(map.keySet().iterator().next());
-        }
-        map.put(key,value);
-    }
-}*/
 public class LRUCache {
     class Node{
         int key;
@@ -111,3 +91,24 @@ public class LRUCache {
     }
 
 }
+class LRUCacheByLinkedHashMap {
+    int capacity;
+    LinkedHashMap<Integer,Integer> map;
+
+    public  LRUCacheByLinkedHashMap(int capacity) {
+        this.capacity = capacity;
+        map = new LinkedHashMap<>(capacity,0.75f,true);
+    }
+
+    public int get(int key) {
+        return map.get(key)==null?-1:map.get(key);
+    }
+
+    public void put(int key, int value) {
+        if(map.size()>=capacity&&!map.containsKey(key)){
+            map.remove(map.keySet().iterator().next());
+        }
+        map.put(key,value);
+    }
+}
+

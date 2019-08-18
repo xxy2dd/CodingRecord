@@ -15,9 +15,12 @@ public class FindGreatestSumOfSubArray {
             return 0;
         }
         int cur = array[0];
+        // 初始化最大值
         int max = array[0];
         for(int i = 1;i<array.length;i++){
+            // 只要cur为正，那么就继续加，否则清空，从i继续开始
             cur = cur>0 ? cur+array[i] : array[i];
+            // 比较max和cur的大小，取最大值
             max = max>cur?max:cur;
         }
         return max;

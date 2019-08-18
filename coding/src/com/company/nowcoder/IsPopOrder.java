@@ -12,7 +12,7 @@ public class IsPopOrder {
         if(pushA.length==0||popA.length==0){
             return false;
         }
-        Stack<Integer> s = new Stack();
+        Stack<Integer> s = new Stack<>();
         for(int i = 0, j = 0;i < pushA.length;i++){
             s.push(pushA[i]);
             while(j < popA.length && s.peek()== popA[j]){

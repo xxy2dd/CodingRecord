@@ -32,7 +32,7 @@ public class mergeSort {
         if (left >= right) {
             return;
         }
-        int mid = (left + right) / 2;
+        int mid = left+(right-left)/2;
         // ·ÖÖÎ
         mergesort(nums, left, mid);
         mergesort(nums, mid + 1, right);

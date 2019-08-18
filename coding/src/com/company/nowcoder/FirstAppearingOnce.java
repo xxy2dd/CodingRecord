@@ -21,7 +21,7 @@ public class FirstAppearingOnce {
         }
         list.add(ch);
     }
-    //return the first appearence once char in current stringstream
+    // return the first appearence once char in current stringstream
     public char FirstAppearingOnce()
     {
         for(char c:list){

@@ -12,6 +12,7 @@ public class test3 {
         Scanner sc = new Scanner(System.in);
         int len = sc.nextInt();
 
+
         int[] a = new int[len];
         int[] b = new int[len];
         //  ‰»Î¥¶¿Ì
